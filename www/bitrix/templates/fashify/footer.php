@@ -1,25 +1,268 @@
 <? if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die(); ?>
+
+<div class="post-pagination">
+	<nav class="navigation pagination" role="navigation">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span class="page-numbers current"><span class="screen-reader-text">Page </span>1</span>
+<a class="page-numbers" href="https://wpstash.com/fashify/page/2/"><span class="screen-reader-text">Page </span>2</a>
+<a class="next page-numbers" href="https://wpstash.com/fashify/page/2/"></a></div>
+	</nav></div>		
+	</main><!-- #main -->
+</div><!-- #primary -->
+
+<aside id="secondary" class="sidebar widget-area" role="complementary">
+	<section id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" class="search-form" action="https://wpstash.com/fashify/">
+    <label for="s">
+		<span class="screen-reader-text">Search for:</span>
+		<input class="search-field" placeholder="Search" value="" name="s" id="s" type="text">
+	</label>
+	<button type="submit" class="search-submit">
+        <i class="fa fa-search"></i>
+    </button>
+    </form></section><section id="fashify-posts-3" class="widget fashify-posts-widget"><h4 class="widget-title">Recent Posts</h4>            <ul class="widget-posts">                <li class="has-thumb">
+                    <a href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" title="Samsung vs. Apple: Samsung Is Winning Every Way But One"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-smartphone-macbook-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="150" height="150"></a>                    <div class="p-info">
+                    <h2 class="entry-title"><a title="Samsung vs. Apple: Samsung Is Winning Every Way But One" href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" rel="bookmark">Samsung vs. Apple: Samsung Is Winning Every Way But One</a></h2>
+                    <span class="entry-date">July 6, 2016</span>                    </div>
+                </li>
+                                <li class="has-thumb">
+                    <a href="https://wpstash.com/fashify/2016/07/06/adeles-album-will-not-be-on-streaming-sites/" title="Adele’s Album Will Not Be On Streaming Sites"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/coffee-apple-iphone-laptop-2-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="150" height="150"></a>                    <div class="p-info">
+                    <h2 class="entry-title"><a title="Adele’s Album Will Not Be On Streaming Sites" href="https://wpstash.com/fashify/2016/07/06/adeles-album-will-not-be-on-streaming-sites/" rel="bookmark">Adele’s Album Will Not Be On Streaming Sites</a></h2>
+                    <span class="entry-date">July 6, 2016</span>                    </div>
+                </li>
+                                <li class="has-thumb">
+                    <a href="https://wpstash.com/fashify/2016/07/06/5-things-to-consider-before-buying-an-apple-watch/" title="5 Things to Consider Before Buying an Apple Watch"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-desk-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="150" height="150"></a>                    <div class="p-info">
+                    <h2 class="entry-title"><a title="5 Things to Consider Before Buying an Apple Watch" href="https://wpstash.com/fashify/2016/07/06/5-things-to-consider-before-buying-an-apple-watch/" rel="bookmark">5 Things to Consider Before Buying an Apple Watch</a></h2>
+                    <span class="entry-date">July 6, 2016</span>                    </div>
+                </li>
+                                <li class="has-thumb">
+                    <a href="https://wpstash.com/fashify/2016/07/06/theyre-observant-incredibly-intuitive-and-can-sometimes-figure-out/" title="They’re observant, incredibly intuitive and can sometimes figure out"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-smartphone-macbook-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="150" height="150"></a>                    <div class="p-info">
+                    <h2 class="entry-title"><a title="They’re observant, incredibly intuitive and can sometimes figure out" href="https://wpstash.com/fashify/2016/07/06/theyre-observant-incredibly-intuitive-and-can-sometimes-figure-out/" rel="bookmark">They’re observant, incredibly intuitive and can sometimes figure out</a></h2>
+                    <span class="entry-date">July 6, 2016</span>                    </div>
+                </li>
+                                <li class="has-thumb">
+                    <a href="https://wpstash.com/fashify/2016/07/06/nor-again-is-there-anyone-who-loves-or-pursues-or-desires/" title="Nor again is there anyone who loves or pursues or desires"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/person-woman-relaxation-girl-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="150" height="150"></a>                    <div class="p-info">
+                    <h2 class="entry-title"><a title="Nor again is there anyone who loves or pursues or desires" href="https://wpstash.com/fashify/2016/07/06/nor-again-is-there-anyone-who-loves-or-pursues-or-desires/" rel="bookmark">Nor again is there anyone who loves or pursues or desires</a></h2>
+                    <span class="entry-date">July 6, 2016</span>                    </div>
+                </li>
+                </ul></section><section id="categories-2" class="widget widget_categories"><h4 class="widget-title">Categories</h4>		<ul>
+	<li class="cat-item cat-item-5"><a href="https://wpstash.com/fashify/category/design/">Design</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://wpstash.com/fashify/category/fashion/">Fashion</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://wpstash.com/fashify/category/mobile/">Mobile</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://wpstash.com/fashify/category/muisic/">Muisic</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://wpstash.com/fashify/category/photo/">Photos</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://wpstash.com/fashify/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://wpstash.com/fashify/category/video/">Videos</a>
+</li>
+		</ul>
+</section><section id="meta-2" class="widget widget_meta"><h4 class="widget-title">Meta</h4>			<ul>
+			<li><a href="https://wpstash.com/fashify/wp-login.php?action=register">Register</a></li>			<li><a href="https://wpstash.com/fashify/wp-login.php">Log in</a></li>
+			<li><a href="https://wpstash.com/fashify/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wpstash.com/fashify/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</section></aside><!-- #secondary -->
+
+</div>
+
+
+
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<?php 
-		// $enable_staff_picks = get_theme_mod( 'fashify_staff_picks', '' ) ;
+	<div class="footer-staff-picks">
 
-		// if ( $enable_staff_picks == true ) {
-		// 	get_template_part( 'template-parts/content', 'staff' );
-		// }
+	<div class="container">
 
-		?>
+		<h3>Staff Picks</h3>
+
+        <div class="staff-inner">
+    		
+			<article id="post-50-recent" class="post-50 post type-post status-publish format-standard has-post-thumbnail hentry category-design category-mobile category-photo category-video tag-design">
+
+								<div class="featured-image">
+					<a href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" title="Samsung vs. Apple: Samsung Is Winning Every Way But One"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-smartphone-macbook-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
+				
+				<header class="entry-header">
+
+					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" rel="bookmark">Samsung vs. Apple: Samsung Is Winning Every Way But One</a></h2>
+				</header>
+
+			</article>
+
+            
+			<article id="post-48-recent" class="post-48 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion category-photo category-uncategorized tag-design">
+
+								<div class="featured-image">
+					<a href="https://wpstash.com/fashify/2016/07/06/5-things-to-consider-before-buying-an-apple-watch/" title="5 Things to Consider Before Buying an Apple Watch"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-desk-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
+				
+				<header class="entry-header">
+
+					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/5-things-to-consider-before-buying-an-apple-watch/" rel="bookmark">5 Things to Consider Before Buying an Apple Watch</a></h2>
+				</header>
+
+			</article>
+
+            
+			<article id="post-46-recent" class="post-46 post type-post status-publish format-standard has-post-thumbnail hentry category-photo category-uncategorized">
+
+								<div class="featured-image">
+					<a href="https://wpstash.com/fashify/2016/07/06/nor-again-is-there-anyone-who-loves-or-pursues-or-desires/" title="Nor again is there anyone who loves or pursues or desires"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/person-woman-relaxation-girl-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
+				
+				<header class="entry-header">
+
+					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/nor-again-is-there-anyone-who-loves-or-pursues-or-desires/" rel="bookmark">Nor again is there anyone who loves or pursues or desires</a></h2>
+				</header>
+
+			</article>
+
+            
+			<article id="post-42-recent" class="post-42 post type-post status-publish format-standard has-post-thumbnail hentry category-photo category-uncategorized category-video">
+
+								<div class="featured-image">
+					<a href="https://wpstash.com/fashify/2016/07/06/here-are-10-youth-innovators-from-ages-seven-to-15/" title="Here are 10 youth innovators, from ages seven to 15"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/coffee-apple-iphone-laptop-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
+				
+				<header class="entry-header">
+
+					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/here-are-10-youth-innovators-from-ages-seven-to-15/" rel="bookmark">Here are 10 youth innovators, from ages seven to 15</a></h2>
+				</header>
+
+			</article>
+
+            
+		    </div>
+			</div>
+
+		</div>
 
 		<?php //if ( is_active_sidebar( 'footer' ) ) { ?>
 		<div class="footer-widgets">
 			<div class="container">
-				<div class="footer-inner">some footer sidebar
-					<?php
-							
-							//dynamic_sidebar( 'footer' );
-					?>
+				<div class="footer-inner">
+					<!-- dynamic_sidebar( 'footer' ); -->
+					<section id="text-2" class="widget widget_text">
+						<h4 class="widget-title">Fashify</h4>
+						<div class="textwidget"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+						<address>
+						1600 Amphitheatre Parkway<br>
+						Mountain View <br>
+						CA 94043<br>
+						Call us: <a href="tel:1.800.123.4567">1.800.123.4567</a><br>
+						</address>
+						</div>
+					</section>
+
+					<section id="categories-3" class="widget widget_categories">
+					<h4 class="widget-title">Categories</h4>		<ul>
+						<li class="cat-item cat-item-5"><a href="https://wpstash.com/fashify/category/design/">Design</a>
+					</li>
+						<li class="cat-item cat-item-6"><a href="https://wpstash.com/fashify/category/fashion/">Fashion</a>
+					</li>
+						<li class="cat-item cat-item-10"><a href="https://wpstash.com/fashify/category/mobile/">Mobile</a>
+					</li>
+						<li class="cat-item cat-item-9"><a href="https://wpstash.com/fashify/category/muisic/">Muisic</a>
+					</li>
+						<li class="cat-item cat-item-7"><a href="https://wpstash.com/fashify/category/photo/">Photos</a>
+					</li>
+						<li class="cat-item cat-item-1"><a href="https://wpstash.com/fashify/category/uncategorized/">Uncategorized</a>
+					</li>
+						<li class="cat-item cat-item-8"><a href="https://wpstash.com/fashify/category/video/">Videos</a>
+					</li>
+							</ul>
+					</section>
+
+					<section id="fashify-posts-2" class="widget fashify-posts-widget">
+					<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"recent_posts_bottom", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "j M Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "my_news",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "3",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "50",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => "recent_posts_bottom"
+	),
+	false
+);?>
+				</section>
+				<!-- 	<section class="widget">
+						<h4 class="widget-title">Recent Posts</h4>
+						<ul class="widget-posts">
+							<li class="has-thumb"><img width="150" height="150" src="">
+								<div class="p-info">
+									<h2 class="entry-tytle">
+										<a href="">Sumsung vs Apple</a>
+									</h2>
+									<span class="entry-date">July 6, 2016</span>
+								</div>
+							</li>
+										<li class="has-thumb"><img width="150" height="150" src="">
+								<div class="p-info">
+									<h2 class="entry-tytle">
+										<a href="">Sumsung vs Apple</a>
+									</h2>
+									<span class="entry-date">July 6, 2016</span>
+								</div>
+							</li>
+						</ul>
+					</section> -->
 				</div>
 			</div>
 		</div>
@@ -28,13 +271,13 @@
 		<div class="site-info">
 			<div class="container">
 
-				<div class="site-copyright"> copy
-					<?php //printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved.', 'fashify' ), date_i18n( __('Y', 'fashify') ), get_bloginfo( 'name' ) ); ?>
-				</div>
+				<div class="site-copyright">
+					Copyright © 2017 Fashify. All Rights Reserved.				</div>
 
 
-				<?php //do_action('fashify_theme_info'); ?>
-
+						<div class="theme-info-text">
+        	Fashify Theme by <a href="https://www.famethemes.com/" rel="designer">FameThemes</a>		</div>
+		
 
 			</div>
 		</div><!-- .site-info -->
