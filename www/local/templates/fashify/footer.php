@@ -75,70 +75,39 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-	<div class="footer-staff-picks">
 
-	<div class="container">
-
-		<h3>Staff Picks</h3>
-
-        <div class="staff-inner">
-    		
-			<article id="post-50-recent" class="post-50 post type-post status-publish format-standard has-post-thumbnail hentry category-design category-mobile category-photo category-video tag-design">
-
-								<div class="featured-image">
-					<a href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" title="Samsung vs. Apple: Samsung Is Winning Every Way But One"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-smartphone-macbook-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
-				
-				<header class="entry-header">
-
-					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" rel="bookmark">Samsung vs. Apple: Samsung Is Winning Every Way But One</a></h2>
-				</header>
-
-			</article>
-
-            
-			<article id="post-48-recent" class="post-48 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion category-photo category-uncategorized tag-design">
-
-								<div class="featured-image">
-					<a href="https://wpstash.com/fashify/2016/07/06/5-things-to-consider-before-buying-an-apple-watch/" title="5 Things to Consider Before Buying an Apple Watch"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-desk-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
-				
-				<header class="entry-header">
-
-					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/5-things-to-consider-before-buying-an-apple-watch/" rel="bookmark">5 Things to Consider Before Buying an Apple Watch</a></h2>
-				</header>
-
-			</article>
-
-            
-			<article id="post-46-recent" class="post-46 post type-post status-publish format-standard has-post-thumbnail hentry category-photo category-uncategorized">
-
-								<div class="featured-image">
-					<a href="https://wpstash.com/fashify/2016/07/06/nor-again-is-there-anyone-who-loves-or-pursues-or-desires/" title="Nor again is there anyone who loves or pursues or desires"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/person-woman-relaxation-girl-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
-				
-				<header class="entry-header">
-
-					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/nor-again-is-there-anyone-who-loves-or-pursues-or-desires/" rel="bookmark">Nor again is there anyone who loves or pursues or desires</a></h2>
-				</header>
-
-			</article>
-
-            
-			<article id="post-42-recent" class="post-42 post type-post status-publish format-standard has-post-thumbnail hentry category-photo category-uncategorized category-video">
-
-								<div class="featured-image">
-					<a href="https://wpstash.com/fashify/2016/07/06/here-are-10-youth-innovators-from-ages-seven-to-15/" title="Here are 10 youth innovators, from ages seven to 15"><img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/coffee-apple-iphone-laptop-280x220.jpg" class="attachment-fashify-thumb-layout3 size-fashify-thumb-layout3 wp-post-image" alt="" width="280" height="220"></a>				</div>
-				
-				<header class="entry-header">
-
-					<h2 class="entry-title"><a href="https://wpstash.com/fashify/2016/07/06/here-are-10-youth-innovators-from-ages-seven-to-15/" rel="bookmark">Here are 10 youth innovators, from ages seven to 15</a></h2>
-				</header>
-
-			</article>
-
-            
-		    </div>
-			</div>
-
-		</div>
+		 <?	// STAFF PICKS
+		 	$APPLICATION->IncludeComponent(
+			"fashify:news.list",
+			".default",
+			Array(
+				"AJAX_MODE" => "N",
+				"AJAX_OPTION_ADDITIONAL" => "",
+				"AJAX_OPTION_HISTORY" => "N",
+				"AJAX_OPTION_JUMP" => "N",
+				"AJAX_OPTION_STYLE" => "Y",
+				"CACHE_TIME" => "36000000",
+				"CACHE_TYPE" => "A",
+				"COMPONENT_TEMPLATE" => ".default",
+				"DISPLAY_DATE" => "Y",
+				"DISPLAY_NAME" => "Y",
+				"DISPLAY_PICTURE" => "Y",
+				"DISPLAY_PREVIEW_TEXT" => "Y",
+				"IBLOCK_ID" => "1",
+				"IBLOCK_TYPE" => "photos",
+				"INCLUDE_SUBSECTIONS" => "Y",
+				"NEWS_COUNT" => "4",
+				"PARENT_SECTION" => "",
+				"PARENT_SECTION_CODE" => "",
+				"PROPERTY_CODE" => array(0=>"",1=>"",),
+				"SMALL_HEIGHT" => "226",
+				"SMALL_WIDTH" => "288",
+				"SORT_BY1" => "ACTIVE_FROM",
+				"SORT_BY2" => "SORT",
+				"SORT_ORDER1" => "DESC",
+				"SORT_ORDER2" => "ASC"
+			)
+		);?>
 
 		<?php //if ( is_active_sidebar( 'footer' ) ) { ?>
 		<div class="footer-widgets">

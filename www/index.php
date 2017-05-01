@@ -50,6 +50,4 @@ $APPLICATION->SetTitle(" ");
 		"VARIABLE_ALIASES" => array("user_settings_edit"=>array("user_id"=>"id",),"trackback"=>array("blog"=>"blog","post_id"=>"id",),)
 	)
 );?>
-</p>
- <br>
-<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+</p><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
