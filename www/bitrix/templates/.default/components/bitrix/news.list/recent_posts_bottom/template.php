@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
-<h4 class="widget-title">Recent Posts</h4>
+<h4 class="widget-title"><?= $arParams["NAME_BLOCK"]?></h4>
 <ul class="widget-posts"> 
 <?php foreach($arResult["ITEMS"] as $arElement):?>
 	<li class="has-thumb">

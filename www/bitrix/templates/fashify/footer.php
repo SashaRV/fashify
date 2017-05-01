@@ -146,15 +146,16 @@
 				<div class="footer-inner">
 					<!-- dynamic_sidebar( 'footer' ); -->
 					<section id="text-2" class="widget widget_text">
-						<h4 class="widget-title">Fashify</h4>
-						<div class="textwidget"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-						<address>
-						1600 Amphitheatre Parkway<br>
-						Mountain View <br>
-						CA 94043<br>
-						Call us: <a href="tel:1.800.123.4567">1.800.123.4567</a><br>
-						</address>
-						</div>
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						"",
+						Array(
+							"AREA_FILE_RECURSIVE" => "Y",
+							"AREA_FILE_SHOW" => "sect",
+							"AREA_FILE_SUFFIX" => "about_bottom",
+							"EDIT_TEMPLATE" => ""
+						)
+					);?>
 					</section>
 
 					<section id="categories-3" class="widget widget_categories">
@@ -237,7 +238,8 @@
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => "recent_posts_bottom"
+		"COMPONENT_TEMPLATE" => "recent_posts_bottom",
+		"NAME_BLOCK" => "Новости"
 	),
 	false
 );?>
