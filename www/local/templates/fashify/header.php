@@ -50,20 +50,22 @@
 
 	</header><!-- #masthead -->
 
-<nav id="site-navigation" class="main-navigation" role="navigation">
-		<div class="container">
-
-			<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">Menu</button>
-			<div class="menu-main-menu-container"><ul id="primary-menu" class="menu nav-menu" aria-expanded="false"><li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-8"><a href="https://wpstash.com/fashify/">Home</a></li>
-<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="https://wpstash.com/fashify/about/">About</a></li>
-<li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40"><a href="https://wpstash.com/fashify/category/design/">Design</a></li>
-<li id="menu-item-41" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41"><a href="https://wpstash.com/fashify/category/fashion/">Fashion</a></li>
-<li id="menu-item-44" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44"><a href="https://wpstash.com/fashify/category/photo/">Photos</a></li>
-<li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a href="https://wpstash.com/fashify/category/video/">Videos</a></li>
-<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="https://wpstash.com/fashify/contact/">Contact</a></li>
-</ul></div>
-		</div>
-	</nav>
+	<?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
+	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"MAX_LEVEL" => "1",	// Уровень вложенности меню
+		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+			0 => "",
+		),
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+	),
+	false
+);?>
 
 <div id="content" class="site-content">
 	<div class="container right-sidebar">
