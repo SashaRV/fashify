@@ -1,11 +1,3 @@
 Trash-1000
 ssh
-www/bitrix/cache/ 
-www/bitrix/managed_cache/ 
-www/bitrix/stack_cache/ 
-www/bitrix/php_interface/dbconn.php 
-www/bitrix/modules/serverfilelog* 
-www/bitrix/modules/updater.log 
-www/bitrix/modules/serverfileerrorlog.dat 
-www/bitrix/wizards/ 
-www/bitrix/backup/
+www/bitrix
