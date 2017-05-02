@@ -1,12 +1,5 @@
 <? if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die(); ?>
-
-<div class="post-pagination">
-	<nav class="navigation pagination" role="navigation">
-		<h2 class="screen-reader-text">Posts navigation</h2>
-		<div class="nav-links"><span class="page-numbers current"><span class="screen-reader-text">Page </span>1</span>
-<a class="page-numbers" href="https://wpstash.com/fashify/page/2/"><span class="screen-reader-text">Page </span>2</a>
-<a class="next page-numbers" href="https://wpstash.com/fashify/page/2/"></a></div>
-	</nav></div>		
+		
 	</main><!-- #main -->
 </div><!-- #primary -->
 

@@ -14,17 +14,22 @@ $this->setFrameMode(true);
 ?>
 
 
-<?foreach($arResult["ITEMS"] as $arItem):?>
+<!--  <?   
+echo "<pre>";
+	//var_dump($arResult);
+	print_r($arResult);
+echo "</pre>";
+?> -->
+<?foreach($arResult["ITEMS"] as $key => $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 	?>
 	<article id="<?=$this->GetEditAreaId($arItem['ID']);?>"
-		class="post-50 post type-post status-publish format-standard has-post-thumbnail hentry category-design category-mobile category-photo category-video tag-design">
+		class="<? if($key > 0) echo 'post-grid'; ?> post-50 post type-post status-publish format-standard has-post-thumbnail hentry category-design category-mobile category-photo category-video tag-design">
 	    <!-- begin .featured-image -->
 	    <div class="featured-image">
-	        <a href="" 
-	        title="Samsung vs. Apple: Samsung Is Winning Every Way But One">
+	        <a href="<?= $arItem["DETAIL_PAGE_URL"]?>">
 	        	<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
 		        class="attachment-fashify-thumb-default size-fashify-thumb-default wp-post-image" 
 		        alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>" 
@@ -52,7 +57,7 @@ $this->setFrameMode(true);
 	                <div class="entry-meta">
 	                    <span class="byline"> Posted by 
 	                    	<span class="author vcard">
-	                    		<a class="url fn n" href="https://wpstash.com/fashify/author/wpstash/">wpstash
+	                    		<a class="url fn n" href="https://wpstash.com/fashify/author/wpstash/"><?= $arParams["CREATED_USER_NAME"]?>
 	                    		</a>
 	                    	</span>
 	                    </span>
@@ -84,6 +89,33 @@ $this->setFrameMode(true);
 		                <p><?= $arItem["PREVIEW_TEXT"];?></p>
 		            </div><!-- .entry-content -->
 	            <?endif;?>
+
+	            <?foreach($arItem["FIELDS"] as $code=>$value):?>
+					<small>
+					<?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?>
+					</small><br />
+				<?endforeach;?>
+				<?foreach($arItem["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
+					<small>
+					<?=$arProperty["NAME"]?>:&nbsp;
+					<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
+						<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
+					<?else:?>
+						<?=$arProperty["DISPLAY_VALUE"];?>
+					<?endif?>
+					</small><br />
+				<?endforeach;?>
 	    </div>
 	</article>
 <?endforeach;?>
+
+<div class="clear-both" "></div>
+<!-- <?   
+echo "<pre>";
+	//var_dump($arResult);
+	print_r($arResult["NAV_STRING"]);
+echo "</pre>";
+?> -->
+<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+	<br /><?=$arResult["NAV_STRING"]?>
+<?endif;?>

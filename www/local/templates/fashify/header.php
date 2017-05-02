@@ -21,7 +21,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="homepage-home3">
 <div id="panel"><?$APPLICATION->ShowPanel();?></div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"></a>
