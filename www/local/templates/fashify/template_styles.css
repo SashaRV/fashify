@@ -1343,6 +1343,10 @@ a:hover, a:active {
 
 .site-header {
 	padding: 45px 0;
+	 background-image: url(assets/img/top_bg.jpg); 
+	 background-repeat: 
+	 no-repeat;
+	 background-size: cover;
 }
 
 .site-header .site-title {

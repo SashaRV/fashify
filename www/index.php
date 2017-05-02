@@ -46,7 +46,7 @@ $APPLICATION->SetTitle(" ");
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
+			0 => "CREATED_BY",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
@@ -82,6 +82,13 @@ $APPLICATION->SetTitle(" ");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
+		"MESSAGES_PER_PAGE" => "10",
+		"USE_CAPTCHA" => "Y",
+		"REVIEW_AJAX_POST" => "Y",
+		"PATH_TO_SMILE" => "/bitrix/images/forum/smile/",
+		"FORUM_ID" => "",
+		"URL_TEMPLATES_READ" => "",
+		"SHOW_LINK_TO_FORUM" => "Y",
 		"VARIABLE_ALIASES" => array(
 			"SECTION_ID" => "SECTION_ID",
 			"ELEMENT_ID" => "ELEMENT_ID",

@@ -14,12 +14,12 @@ $this->setFrameMode(true);
 ?>
 
 
-<!--  <?   
-echo "<pre>";
-	//var_dump($arResult);
-	print_r($arResult);
-echo "</pre>";
-?> -->
+  <?   
+// echo "<pre>";
+// 	//var_dump($arResult);
+// 	// print_r($arResult);
+// echo "</pre>";
+?> 
 <?foreach($arResult["ITEMS"] as $key => $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -57,7 +57,8 @@ echo "</pre>";
 	                <div class="entry-meta">
 	                    <span class="byline"> Posted by 
 	                    	<span class="author vcard">
-	                    		<a class="url fn n" href="https://wpstash.com/fashify/author/wpstash/"><?= $arParams["CREATED_USER_NAME"]?>
+	                    		<a class="url fn n" href="">
+	                    		<?= $arItem["CREATED_USER_NAME"], $arItem["CREATED_USER_LAST_NAME"]?>
 	                    		</a>
 	                    	</span>
 	                    </span>
@@ -90,11 +91,12 @@ echo "</pre>";
 		            </div><!-- .entry-content -->
 	            <?endif;?>
 
-	            <?foreach($arItem["FIELDS"] as $code=>$value):?>
+	            <?/*foreach($arItem["FIELDS"] as $code=>$value):?>
 					<small>
 					<?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?>
 					</small><br />
-				<?endforeach;?>
+				<?endforeach;*/?>
+				
 				<?foreach($arItem["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
 					<small>
 					<?=$arProperty["NAME"]?>:&nbsp;
