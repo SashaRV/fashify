@@ -2149,3 +2149,7 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+.entry-footer .posted-in-detail {
+	margin-top: 20px;
+}

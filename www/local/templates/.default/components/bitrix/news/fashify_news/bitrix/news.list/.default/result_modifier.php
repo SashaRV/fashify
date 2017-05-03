@@ -1,8 +1,8 @@
 <?php
+
 foreach($arResult["ITEMS"] as $key => $arItem) {
-// 	echo "<pre>";
-// print_r(CIBlockElement::GetElementGroups($arItem['ID'])->fetch());
-// echo "</pre>";
+
+	$arPostId[] = $arItem['ID'];
 
 	// get post author name, last name
 	$rsUser = CUser::GetById($arItem["CREATED_BY"]);
@@ -10,23 +10,18 @@ foreach($arResult["ITEMS"] as $key => $arItem) {
 	
 	$arResult['ITEMS'][$key]['CREATED_USER_NAME'] = $arUser["NAME"];
 	$arResult['ITEMS'][$key]['CREATED_USER_LAST_NAME'] = $arUser["LAST_NAME"];
-
-	// get current post caterories
-
-	// $arFilter = array();
-	// $arFilter =  array("IBLOCK_ID" => $arItem["IBLOCK_ID"]);
-	// $arFilter =  array("IBLOCK_ID" => 3);
-
-	// $db_list = CIBlockSection::GetList(Array(), $arFilter);
-
-
-	// while($ar_result = $db_list->GetNext())
-	// {
-	// 	echo "<pre>";
-	// 		//print_r($ar_result);
-	// 	echo "</pre>";
-	//}
 }
 
+// get current post caterories
+$arPostCategories = CIBlockElement::GetElementGroups($arPostId);
 
-//https://dev.1c-bitrix.ru/api_help/iblock/classes/ciblockelement/getelementgroups.php
+while($arCategory = $arPostCategories->GetNext())
+{
+	$postId = $arCategory["IBLOCK_ELEMENT_ID"];
+
+	foreach ($arResult['ITEMS'] as $key => $arItem) {
+		if($arItem["ID"] == $postId) {
+			$arResult['ITEMS'][$key]['CATEGORIES'][] = $arCategory;
+		}
+	}
+}

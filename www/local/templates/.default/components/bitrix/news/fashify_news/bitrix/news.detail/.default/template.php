@@ -71,9 +71,18 @@ $this->setFrameMode(true);
 <!-- 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">Continue Reading</h2>
 		<div class="nav-links"><div class="nav-previous"><a href="https://wpstash.com/fashify/2016/07/06/theyre-observant-incredibly-intuitive-and-can-sometimes-figure-out/" rel="prev"><span>Previous article</span> They’re observant, incredibly intuitive and can sometimes figure out</a></div><div class="nav-next"><a href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" rel="next"><span>Next article</span> Samsung vs. Apple: Samsung Is Winning Every Way But One</a></div></div>
-	</nav>
+	</nav>-->
 	<footer class="entry-footer">
-		<div class="entry-taxonomies"><div class="entry-categories"><span>Posted in</span> <a href="https://wpstash.com/fashify/category/design/" rel="category tag">Design</a>, <a href="https://wpstash.com/fashify/category/muisic/" rel="category tag">Muisic</a>, <a href="https://wpstash.com/fashify/category/video/" rel="category tag">Videos</a></div><div class="entry-tags"><span>Tagged in</span> <a href="https://wpstash.com/fashify/tag/design/" rel="tag">design</a></div></div>	
+		<div class="entry-taxonomies">
+			<?if(count($arResult["CATEGORIES"])):?>
+            <div class="entry-categories posted-in-detail">
+				<span>Posted in</span>
+            	<?php foreach ($arResult["CATEGORIES"] as $category): ?>
+            		<a class="category tag" rel="category tag"><?=$category["NAME"]?></a> 
+            	<?php endforeach ?>
+            </div>
+            <?endif;?>
+		</div>	
 	</footer><!-- .entry-footer --> 
 
 </article>

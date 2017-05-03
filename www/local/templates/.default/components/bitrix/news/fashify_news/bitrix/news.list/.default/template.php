@@ -17,8 +17,9 @@ $this->setFrameMode(true);
   <?   
 // echo "<pre>";
 // 	//var_dump($arResult);
-// 	// print_r($arResult);
+// 	 print_r($arResult);
 // echo "</pre>";
+  //echo count($arResult["ITEMS"]);
 ?> 
 <?foreach($arResult["ITEMS"] as $key => $arItem):?>
 	<?
@@ -70,16 +71,13 @@ $this->setFrameMode(true);
 	                    	</a>
 	                    </span>
 						<?endif?>
+						<?if(count($arItem["CATEGORIES"])):?>
 	                    <span class="posted-in"> in 
-	                    	<a href="https://wpstash.com/fashify/category/design/" rel="category tag">Design
-	                    	</a>, 
-	                    	<a href="https://wpstash.com/fashify/category/mobile/" rel="category tag">Mobile
-	                    	</a>, 
-	                    	<a href="https://wpstash.com/fashify/category/photo/" rel="category tag">Photos
-	                    	</a>, 
-	                    	<a href="https://wpstash.com/fashify/category/video/" rel="category tag">Videos
-	                    	</a>
+	                    	<?php foreach ($arItem["CATEGORIES"] as $category): ?>
+	                    		<a href="<?=$category["LIST_PAGE_URL"]?>" rel="category tag"><?=$category["NAME"]?></a> 
+	                    	<?php endforeach ?>
 	                    </span>
+	                    <?endif;?>
 	                </div>
 
 	            </div>
