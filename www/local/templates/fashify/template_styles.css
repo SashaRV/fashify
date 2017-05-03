@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 #. Normalize
 --------------------------------------------------------------*/
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -2152,4 +2153,8 @@ object {
 
 .entry-footer .posted-in-detail {
 	margin-top: 20px;
+}
+
+header.entry-header  {
+	margin-bottom: 30px;
 }

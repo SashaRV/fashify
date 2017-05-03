@@ -1,0 +1,23 @@
+.entry-meta .social-likes {
+	display: inline;
+	float: right;
+}
+.social-likes, .social-likes_single-w {
+    line-height: 13px;
+}
+.social-likes__widget {
+	line-height: 14px;
+	margin-left: 6px;
+}
+.social-likes__button {
+    padding: 0px 6px 0px 20px;
+}
+.social-likes__button, .social-likes__counter {
+	font-size: 7px;
+	line-height: 14px;
+}
+
+.social-likes__icon {
+    height: 16px;
+    margin-top: -1px;
+}

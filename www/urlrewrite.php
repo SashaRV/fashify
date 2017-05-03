@@ -24,6 +24,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:photogallery",
 		"PATH" => "/photo.php",
 	),
+	array(
+		"CONDITION" => "#^/news/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/index.php",
+	),
 );
 
 ?>

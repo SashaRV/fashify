@@ -13,9 +13,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="style/css" href="<?=SITE_TEMPLATE_PATH?>/assets/css/font-awesome.min.css"></script>
+	<!-- styles -->
+	<?$APPLICATION->SetAdditionalCSS("/local/templates/fashify/assets/css/font-awesome.min.css");?>
+	<?$APPLICATION->SetAdditionalCSS("/local/templates/fashify/lib/social-likes/social-likes_birman.css");?>
+	<?$APPLICATION->SetAdditionalCSS("/local/templates/fashify/assets/css/social-likes-customize.css");?>
+
+	<!-- scripts -->
+	<script src="<?=SITE_TEMPLATE_PATH?>/lib/jquery/jquery-2.2.5.js"></script>
 	<script src="<?=SITE_TEMPLATE_PATH?>/assets/js/navigation.js"></script>
 	<script src="<?=SITE_TEMPLATE_PATH?>/assets/js/skip-link-focus-fix.js"></script>
+	<script src="<?=SITE_TEMPLATE_PATH?>/lib/social-likes/social-likes.min.js"></script>
+	<script src="<?=SITE_TEMPLATE_PATH?>/assets/js/main.js"></script>
+
 	<?$APPLICATION->ShowHead()?>
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
