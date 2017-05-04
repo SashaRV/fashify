@@ -17,14 +17,25 @@ $this->setFrameMode(true);
 <ul class="widget-posts"> 
 <?php foreach($arResult["ITEMS"] as $arElement):?>
 	<li class="has-thumb">
-        <a href="<?=$arElement["DETAIL_PAGE_URL"] ?>" title="Samsung vs. Apple: Samsung Is Winning Every Way But One">
-        	<img src="https://wpstash.com/fashify/wp-content/uploads/sites/5/2016/07/pexels-photo-smartphone-macbook-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="150" height="150">
+        <a href="<?=$arElement["DETAIL_PAGE_URL"] ?>" 
+           title="<?=$arElement["PREVIEW_PICTURE"]["TITLE"] ?>">
+        	<img src="<?=$arElement["PREVIEW_PICTURE"]["SRC"] ?>" 
+        		 alt="<?=$arElement["PREVIEW_PICTURE"]["ALT"] ?>" 
+        		 width="150" height="150">
         </a>
         <div class="p-info">
 	        <h2 class="entry-title">
-	        	<a title="Samsung vs. Apple: Samsung Is Winning Every Way But One" href="<?=$arElement["DETAIL_PAGE_URL"] ?>" rel="bookmark"><?=$arElement["PREVIEW_TEXT"] ?></a>
+	        	<a href="<?=$arElement["DETAIL_PAGE_URL"] ?>" 
+	        	   title="<?=$arElement["PREVIEW_PICTURE"]["TITLE"] ?>"
+	        	rel="bookmark"><?=$arElement["PREVIEW_TEXT"] ?></a>
 	        </h2>
-	        <span class="entry-date"><?=$arElement["ACTIVE_FROM"] ?></span>
+	        <? if($arElement["ACTIVE_FROM"]): ?>
+		        <?
+		        	$originalDate = $arElement["ACTIVE_FROM"];
+					$activeFrom = date("M d, Y", strtotime($originalDate));
+		        ?>
+		        <span class="entry-date"><?=$activeFrom ?></span>
+	        <? endif;?>
 	    </div>
     </li>
 <? endforeach; ?>
