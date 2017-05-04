@@ -2158,3 +2158,10 @@ object {
 header.entry-header  {
 	margin-bottom: 30px;
 }
+
+.staff-picks-img {
+	min-height:220px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover;
+}

@@ -48,38 +48,18 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-
-		 <?	// STAFF PICKS
-		 	$APPLICATION->IncludeComponent(
-			"fashify:news.list",
-			".default",
-			Array(
-				"AJAX_MODE" => "N",
-				"AJAX_OPTION_ADDITIONAL" => "",
-				"AJAX_OPTION_HISTORY" => "N",
-				"AJAX_OPTION_JUMP" => "N",
-				"AJAX_OPTION_STYLE" => "Y",
-				"CACHE_TIME" => "36000000",
-				"CACHE_TYPE" => "A",
-				"COMPONENT_TEMPLATE" => ".default",
-				"DISPLAY_DATE" => "Y",
-				"DISPLAY_NAME" => "Y",
-				"DISPLAY_PICTURE" => "Y",
-				"DISPLAY_PREVIEW_TEXT" => "Y",
-				"IBLOCK_ID" => "1",
-				"IBLOCK_TYPE" => "photos",
-				"INCLUDE_SUBSECTIONS" => "Y",
-				"NEWS_COUNT" => "4",
-				"PARENT_SECTION" => "",
-				"PARENT_SECTION_CODE" => "",
-				"PROPERTY_CODE" => array(0=>"",1=>"",),
-				"SMALL_HEIGHT" => "226",
-				"SMALL_WIDTH" => "288",
-				"SORT_BY1" => "ACTIVE_FROM",
-				"SORT_BY2" => "SORT",
-				"SORT_ORDER1" => "DESC",
-				"SORT_ORDER2" => "ASC"
-			)
+		<!-- Staff picks -->
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:main.include", 
+			".default", 
+			array(
+				"AREA_FILE_RECURSIVE" => "Y",
+				"AREA_FILE_SHOW" => "sect",
+				"AREA_FILE_SUFFIX" => "staff_picks_area",
+				"EDIT_TEMPLATE" => "",
+				"COMPONENT_TEMPLATE" => ".default"
+			),
+			false
 		);?>
 
 		<?php //if ( is_active_sidebar( 'footer' ) ) { ?>
