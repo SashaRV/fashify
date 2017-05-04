@@ -27,7 +27,7 @@ while($ob = $iBblockElemCompanyOffices->GetNextElement()) {
  	$arResult["COMPANY_OFFICES"][] = $arOffice;
 }
 
-//if ($this->startResultCache()) {
+if ($this->StartResultCache()) {
 	$arParams['MAP_ID'] =
 		(strlen($arParams["MAP_ID"])<=0 || !preg_match("/^[A-Za-z_][A-Za-z01-9_]*$/", $arParams["MAP_ID"])) ? 
 		'MAP_'.RandString() : $arParams['MAP_ID']; 
@@ -50,8 +50,7 @@ while($ob = $iBblockElemCompanyOffices->GetNextElement()) {
 			}
 		}
 	}
+	$this->IncludeComponentTemplate();
+}
 
-	
-//}
-$this->IncludeComponentTemplate();
 ?>

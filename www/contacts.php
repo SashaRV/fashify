@@ -13,7 +13,7 @@ $APPLICATION->SetTitle("Обратная связь");
 	"bizprofi:map", 
 	".default", 
 	array(
-		"CACHE_TIME" => "36000000",
+		"CACHE_TIME" => "60",
 		"CACHE_TYPE" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
 		"CONTROLS" => array(
