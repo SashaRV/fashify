@@ -29,7 +29,7 @@
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"NAME_BLOCK" => "News",
+		"NAME_BLOCK" => "Новости",
 		"NEWS_COUNT" => "5",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",

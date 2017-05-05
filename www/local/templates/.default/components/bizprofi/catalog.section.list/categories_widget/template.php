@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 <ul>
 	<? foreach($arResult["SECTIONS"] as $category):?>
 	<li class="cat-item">
-		<a href="<?= "/news" . $category["SECTION_PAGE_URL"] ."/"?>"><?= $category["NAME"] ?></a>
+		<a href="<?= $category["SECTION_PAGE_URL"] ."/"?>"><?= $category["NAME"] ?></a>
 	</li>
 	<? endforeach;?>
 </ul>

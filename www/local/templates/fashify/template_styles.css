@@ -2165,3 +2165,10 @@ header.entry-header  {
 	background-position: center;
 	background-size:cover;
 }
+.site-title a, .site-description, .social-links ul a {
+    color: #ffffff;
+}
+
+.entry-meta .decor {
+    color: #f75357;
+}

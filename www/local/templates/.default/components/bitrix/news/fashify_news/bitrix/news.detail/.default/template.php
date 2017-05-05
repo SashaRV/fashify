@@ -13,26 +13,24 @@
 $this->setFrameMode(true);
 ?>
 
-
-
 <article id="" class="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-muisic category-video tag-design">
 	<header class="entry-header">
 		<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
 			<h1 class="entry-title"><?=$arResult["NAME"]?></h1>
 		<?endif;?>
 		<div class="entry-meta">
-			<span class="byline"> Posted by
+			<span class="byline"> Автор
 				<span class="author vcard">
-					<a class="url fn n" href="https://wpstash.com/fashify/author/wpstash/">wpstash
-					</a>
+					<span class="decor url fn n">
+					<?= $arResult["CREATED_USER_NAME"], $arParams["CREATED_USER_LAST_NAME"]?>
+					</span>
 				</span>
 			</span>
 			<?if($arParams["DISPLAY_DATE"]!="N" && $arResult["DISPLAY_ACTIVE_FROM"]):?>
-				<span class="posted-on"> on 
-					<a href="" rel="bookmark">
+				<span class="posted-on"> размещено 
+					<span class="decor" rel="bookmark">
 						<time class="entry-date published" datetime="<?=$arResult["DISPLAY_ACTIVE_FROM"]?>"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></time>
-						<time class="updated" datetime="<?=$arResult["DISPLAY_ACTIVE_FROM"]?>"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></time>
-					</a>
+					</span>
 				</span>
 			<?endif;?>
 			<div id="social-share-buttons" class="social-likes" data-counters="no">
@@ -86,9 +84,9 @@ $this->setFrameMode(true);
 		<div class="entry-taxonomies">
 			<?if(count($arResult["CATEGORIES"])):?>
             <div class="entry-categories posted-in-detail">
-				<span>Posted in</span>
+				<span>В категориях</span>
             	<?php foreach ($arResult["CATEGORIES"] as $category): ?>
-            		<a class="category tag" rel="category tag"><?=$category["NAME"]?></a> 
+            		<a href="<?=$category["SECTION_PAGE_URL"]?>/" class="category tag" rel="category tag"><?=$category["NAME"]?></a> 
             	<?php endforeach ?>
             </div>
             <?endif;?>

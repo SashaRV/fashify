@@ -13,14 +13,6 @@
 $this->setFrameMode(true);
 ?>
 
-
-  <?   
-// echo "<pre>";
-// 	//var_dump($arResult);
-// 	 print_r($arResult);
-// echo "</pre>";
-  //echo count($arResult["ITEMS"]);
-?> 
 <?foreach($arResult["ITEMS"] as $key => $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -56,25 +48,25 @@ $this->setFrameMode(true);
 					<?endif;?>
 
 	                <div class="entry-meta">
-	                    <span class="byline"> Posted by 
+	                    <span class="byline"> Автор
 	                    	<span class="author vcard">
-	                    		<a class="url fn n" href="">
+	                    		<span class="decor url fn n">
 	                    		<?= $arItem["CREATED_USER_NAME"], $arItem["CREATED_USER_LAST_NAME"]?>
-	                    		</a>
+	                    		</span>
 	                    	</span>
 	                    </span>
 	                    <?if($arParams["DISPLAY_DATE"]!="N" && $arItem["DISPLAY_ACTIVE_FROM"]):?>
-							<span class="posted-on"> on 
-	                    	<a href="" rel="bookmark">
-	                    	<time class="entry-date published" datetime="<?= $arItem["DISPLAY_ACTIVE_FROM"]?>"><?= $arItem["DISPLAY_ACTIVE_FROM"]?>
+							<span class="posted-on"> размещено 
+	                    	<span rel="bookmark">
+	                    	<time class="decor entry-date published" datetime="<?= $arItem["DISPLAY_ACTIVE_FROM"]?>"><?= $arItem["DISPLAY_ACTIVE_FROM"]?>
 	                    	</time>
-	                    	</a>
+	                    	</span>
 	                    </span>
 						<?endif?>
 						<?if(count($arItem["CATEGORIES"])):?>
-	                    <span class="posted-in"> in 
+	                    <span class="posted-in"> в категориях 
 	                    	<?php foreach ($arItem["CATEGORIES"] as $category): ?>
-	                    		<a href="<?=$category["LIST_PAGE_URL"]?>" rel="category tag"><?=$category["NAME"]?></a> 
+	                    		<a href="<?=$category["SECTION_PAGE_URL"]?>/" rel="category tag"><?=$category["NAME"]?></a> 
 	                    	<?php endforeach ?>
 	                    </span>
 	                    <?endif;?>

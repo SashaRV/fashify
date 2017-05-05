@@ -25,7 +25,7 @@ $arUrlRewrite = array(
 		"PATH" => "/photo.php",
 	),
 	array(
-		"CONDITION" => "#^/news/#",
+		"CONDITION" => "#^/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/index.php",

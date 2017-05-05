@@ -4,7 +4,7 @@
 </div><!-- #primary -->
 
 <aside id="secondary" class="sidebar widget-area" role="complementary">
-	<section id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" class="search-form" action="https://wpstash.com/fashify/">
+<!-- 	<section id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" class="search-form" action="https://wpstash.com/fashify/">
     <label for="s">
 		<span class="screen-reader-text">Search for:</span>
 		<input class="search-field" placeholder="Search" value="" name="s" id="s" type="text">
@@ -13,7 +13,7 @@
         <i class="fa fa-search"></i>
     </button>
     </form>
-    </section>
+    </section> -->
     	<section class="widget fashify-posts-widget">
 			<?$APPLICATION->IncludeComponent(
 				"bitrix:main.include", 
@@ -141,11 +141,9 @@
 			<div class="container">
 
 				<div class="site-copyright">
-					Copyright © 2017 Fashify. All Rights Reserved.				</div>
-
-
+					© 2017 Fashify.</div>
 						<div class="theme-info-text">
-        	Fashify Theme by <a href="https://www.famethemes.com/" rel="designer">FameThemes</a>		</div>
+        	Создатели дизайна темы <a href="https://www.famethemes.com/" rel="designer">FameThemes</a>		</div>
 		
 
 			</div>
