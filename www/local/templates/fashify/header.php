@@ -39,7 +39,7 @@
 		<div class="container">
 
 			<div class="site-branding">
-					<h1 class="site-title"><a href="" rel="home">FASHIFY</a></h1>
+					<h1 class="site-title"><a href="/" rel="home">FASHIFY</a></h1>
 					<p class="site-description">Измени мышление, и ты изменишь свою жизнь. </p>
 			</div><!-- .site-branding -->
 

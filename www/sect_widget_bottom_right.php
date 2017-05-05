@@ -14,7 +14,7 @@
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "/news/#SECTION_CODE#/#CODE#/",
+		"DETAIL_URL" => "/#SECTION_CODE#/#CODE#/",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
