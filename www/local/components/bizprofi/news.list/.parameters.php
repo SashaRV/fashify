@@ -207,6 +207,21 @@ $arComponentParameters = array(
 			"TYPE" => "STRING",
 			"DEFAULT" => "News",
 		),
+		"RESIZE_PREVIEW_WIDTH" => Array(
+			"NAME" => GetMessage("T_RESIZE_PREVIEW_WIDTH"),
+			"TYPE" => "STRING",
+			"DEFAULT" => "150",
+		),
+		"RESIZE_PREVIEW_HIGHT" => Array(
+			"NAME" => GetMessage("T_RESIZE_PREVIEW_HIGHT"),
+			"TYPE" => "STRING",
+			"DEFAULT" => "150",
+		),
+		"RESIZE_PREVIEW_TYPE" => Array(
+			"NAME" => GetMessage("T_RESIZE_PREVIEW_TYPE"),
+			"TYPE" => "STRING",
+			"DEFAULT" => "BX_RESIZE_IMAGE_EXACT",
+		),
 	),
 );
 

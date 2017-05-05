@@ -5,5 +5,4 @@ $MESS ['T_IBLOCK_DESC_NEWS_PICTURE'] = "Display element preview picture";
 $MESS ['T_IBLOCK_DESC_NEWS_TEXT'] = "Display element preview text";
 
 $MESS ['T_NAME_BLOCK'] = "Display block name";
-
 ?>

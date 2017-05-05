@@ -34,4 +34,7 @@ $MESS["CP_BNL_SET_META_KEYWORDS"] = "Устанавливать ключевые
 $MESS["CP_BNL_SET_META_DESCRIPTION"] = "Устанавливать описание страницы";
 $MESS["CP_BNL_SET_LAST_MODIFIED"] = "Устанавливать в заголовках ответа время модификации страницы";
 $MESS["NAME_BLOCK"] = "заголовок блока";
+$MESS ['T_RESIZE_PREVIEW_WIDTH'] = "Ширина миниатюры";
+$MESS ['T_RESIZE_PREVIEW_HIGHT'] = "Высота миниатюры";
+$MESS ['T_RESIZE_PREVIEW_TYPE'] = "Тип изменения размера";
 ?>

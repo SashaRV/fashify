@@ -1,7 +1,6 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
-//print_r($arResult["COMPANY_OFFICES"]);
 
 if ($arParams['BX_EDITOR_RENDER_MODE'] == 'Y'):
 ?>

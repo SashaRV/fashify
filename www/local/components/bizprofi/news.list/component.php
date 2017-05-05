@@ -358,6 +358,31 @@ if($this->startResultCache(false, array(($arParams["CACHE_GROUPS"]==="N"? false:
 		$arResult["NAV_RESULT"] = $rsElement;
 		$arResult["NAV_PARAM"] = $navComponentParameters;
 
+		// Resize img preview
+		$arResizeType = array(
+			"BX_RESIZE_IMAGE_EXACT" => BX_RESIZE_IMAGE_EXACT,
+			"BX_RESIZE_IMAGE_PROPORTIONAL" => BX_RESIZE_IMAGE_PROPORTIONAL,
+			"BX_RESIZE_IMAGE_PROPORTIONAL_ALT" => BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
+			"" => BX_RESIZE_IMAGE_EXACT,
+		);
+
+		foreach($arResult["ITEMS"] as $key => $arElement) {
+			if($arElement["PREVIEW_PICTURE"]["ID"]) {
+				
+				$img = CFile::ResizeImageGet(
+					$arElement["PREVIEW_PICTURE"]["ID"], 
+					array(
+						'width'=>$arParams["RESIZE_PREVIEW_WIDTH"], 
+						'height'=>$arParams["RESIZE_PREVIEW_HIGHT"]
+					),
+					$arResizeType[$arParams["RESIZE_PREVIEW_TYPE"]], 
+					true
+				);
+
+				$arResult["ITEMS"][$key]["PREVIEW_PICTURE"]["RESIZED"]["SMALL"] = $img;
+			}
+		}
+
 		$this->setResultCacheKeys(array(
 			"ID",
 			"IBLOCK_TYPE_ID",
@@ -369,6 +394,7 @@ if($this->startResultCache(false, array(($arParams["CACHE_GROUPS"]==="N"? false:
 			"IPROPERTY_VALUES",
 			"ITEMS_TIMESTAMP_X",
 		));
+
 		$this->includeComponentTemplate();
 	}
 	else

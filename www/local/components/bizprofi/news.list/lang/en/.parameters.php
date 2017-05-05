@@ -34,5 +34,7 @@ $MESS["CP_BNL_SET_META_DESCRIPTION"] = "Set page description";
 $MESS["CP_BNL_SET_BROWSER_TITLE"] = "Set browser window title";
 $MESS["CP_BNL_SET_LAST_MODIFIED"] = "Set page last modified date to response header";
 $MESS["NAME_BLOCK"] = "Block header";
-
+$MESS ['T_RESIZE_PREVIEW_WIDTH'] = "width preview";
+$MESS ['T_RESIZE_PREVIEW_HIGHT'] = "height preview";
+$MESS ['T_RESIZE_PREVIEW_TYPE'] = "Resize type";
 ?>
