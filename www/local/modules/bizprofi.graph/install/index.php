@@ -4,7 +4,7 @@ use Bitrix\Main\Application;
 use Bitrix\Main\Loader;
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\ModuleManager;
-use Bizprofi\Graph\MetricTable;
+use Bizprofi\Graph\CMetricTable;
 
 Loc::loadMessages(__FILE__);
 

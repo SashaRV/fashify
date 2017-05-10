@@ -13,7 +13,7 @@ use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 
-class MetricTable extends DataManager
+class CMetricTable extends DataManager
 {
     public static function getTableName()
     {

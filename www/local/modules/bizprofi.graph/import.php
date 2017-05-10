@@ -6,35 +6,31 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_befo
 
 // namespaces
 use Bitrix\Main\Loader;
-use Bizprofi\Graph\MetricTable;
+use Bizprofi\Graph\CMetricTable;
 use Bitrix\Main\Type\DateTime;
 
 $start = microtime(true);
-$importFile = './output.csv';
+$importFile = './output-small.csv';
 
 if (!Loader::includeModule('bizprofi.graph')) {
 	throw new \Exception("Error Processing Request", 1);
 }
 
-if (false === ($fd = fopen($importFile, 'rb'))) {
-	fwrite(STDOUT, 'error, can not open the file '.$importFile);
-	die();
-}
-
-fwrite(STDOUT, 'File opened'.PHP_EOL);
-
-
-if(MetricTable::deleteAll()->result !== true) {
+if(CMetricTable::deleteAll()->result !== true) {
 	fwrite(STDOUT,  "db error, can not execute delete all rows".PHP_EOL);
-	die();
+	throw new \Exception("db error, can not execute delete all rows", 1);
 }
 
 fwrite(STDOUT,  "delted all previous rows from table".PHP_EOL);
 
-while ($row = fgetcsv($fd)) {
-	$str = "added ".$row[1]." ".$row[2]." ".$row[0];
+$file = new SplFileObject($importFile);
+$file->seek(1);
 
-	$add = MetricTable::add([
+while ($file->valid()) {
+  	$row = $file->fgetcsv();
+  	$result = "added ".$row[1]." ".$row[2]." ".$row[0];
+
+	$add = CMetricTable::add([
 		'HOST' => (string) $row[1],
 		'VALUE' => (float) $row[2],
 		'TIMESTAMP' => DateTime::createFromTimestamp($row[0]),
@@ -43,9 +39,10 @@ while ($row = fgetcsv($fd)) {
 	if (!$add->isSuccess()) {
 		fwrite(STDOUT, implode(', ', $add->getErrorMessages()).PHP_EOL);
 	}else {
-		fwrite(STDOUT, $str.PHP_EOL);
+		fwrite(STDOUT, $result.PHP_EOL);
 	}
-}
+} 
+
 
 $end = (microtime(true) - $start);
 fwrite(STDOUT, 'Data imported. Executed time: '.$end.' seconds.'.PHP_EOL);
