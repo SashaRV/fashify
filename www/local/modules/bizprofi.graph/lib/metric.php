@@ -24,7 +24,6 @@ class MetricTable extends DataManager
     {
         return array(
             new IntegerField('ID', array(
-                'required' => true,
                 'autocomplete' => true,
                 'primary' => true,
                 'title' => Loc::getMessage('BIZPROFI_GRAPH_TABLE_ID'),
@@ -34,7 +33,7 @@ class MetricTable extends DataManager
                 'title' => Loc::getMessage('BIZPROFI_GRAPH_TABLE_HOST'),
                 'validation' => function () {
                     return array(
-                        new Validator\Length(null, 3),
+                        new Validator\Length(1, 4),
                     );
                 },
             )),
@@ -48,5 +47,15 @@ class MetricTable extends DataManager
 
             )),
         );
+    }
+
+    public static function deleteAll()
+    {
+        if(!is_callable(array(get_parent_class(__CLASS__), "deleteAll"))){
+            global $DB;
+            return $DB->Query("TRUNCATE TABLE " . self::getTableName(), true);
+        } else {
+            return parent::deleteAll();
+        }
     }
 }
