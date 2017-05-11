@@ -13,9 +13,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="style/css" href="<?=SITE_TEMPLATE_PATH?>/assets/css/font-awesome.min.css"></script>
+	<!-- styles -->
+	<?$APPLICATION->SetAdditionalCSS("/local/templates/fashify/assets/css/font-awesome.min.css");?>
+	<?$APPLICATION->SetAdditionalCSS("/local/templates/fashify/lib/social-likes/social-likes_birman.css");?>
+	<?$APPLICATION->SetAdditionalCSS("/local/templates/fashify/assets/css/social-likes-customize.css");?>
+
+	<!-- scripts -->
+	<script src="<?=SITE_TEMPLATE_PATH?>/lib/jquery/jquery-2.2.5.js"></script>
 	<script src="<?=SITE_TEMPLATE_PATH?>/assets/js/navigation.js"></script>
 	<script src="<?=SITE_TEMPLATE_PATH?>/assets/js/skip-link-focus-fix.js"></script>
+	<script src="<?=SITE_TEMPLATE_PATH?>/lib/social-likes/social-likes.min.js"></script>
+	<script src="<?=SITE_TEMPLATE_PATH?>/assets/js/main.js"></script>
+
 	<?$APPLICATION->ShowHead()?>
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +39,11 @@
 		<div class="container">
 
 			<div class="site-branding">
-					<h1 class="site-title"><a href="" rel="home">FASHIFY</a></h1>
-					<p class="site-description">description</p>
+					<h1 class="site-title"><a href="/" rel="home">FASHIFY</a></h1>
+					<p class="site-description">Измени мышление, и ты изменишь свою жизнь. </p>
 			</div><!-- .site-branding -->
 
-	<!-- 		<div class="social-menu">
+	 		<div class="social-menu">
 				<div id="menu-social" class="social-links">
 					<ul id="menu-social" class="menu"><li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="https://www.facebook.com/"><span class="screen-reader-text">facebook</span></a></li>
 					<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="http://twitter.com/"><span class="screen-reader-text">twitter</span></a></li>
@@ -44,25 +53,28 @@
 					<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="https://www.pinterest.com/"><span class="screen-reader-text">Pinterest</span></a></li>
 					</ul>
 				</div>			
-			</div> -->
+			</div>
 
 		</div>
 
 	</header><!-- #masthead -->
 
-	<?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
-	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"MAX_LEVEL" => "1",	// Уровень вложенности меню
-		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
-			0 => "",
+	<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"COMPONENT_TEMPLATE" => "top_menu",
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
 		),
-		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N",
 	),
 	false
 );?>

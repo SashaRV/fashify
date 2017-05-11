@@ -1,7 +1,7 @@
 <?
 $arTemplate = array (
   'NAME' => 'fashify',
-  'DESCRIPTION' => 'Ќа главную страницу сайта выведен каталог книг.',
+  'DESCRIPTION' => '',
   'SORT' => '',
   'TYPE' => '',
 );

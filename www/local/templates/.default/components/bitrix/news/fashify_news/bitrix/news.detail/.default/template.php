@@ -13,27 +13,35 @@
 $this->setFrameMode(true);
 ?>
 
-
 <article id="" class="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-muisic category-video tag-design">
 	<header class="entry-header">
 		<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
 			<h1 class="entry-title"><?=$arResult["NAME"]?></h1>
 		<?endif;?>
 		<div class="entry-meta">
-			<span class="byline"> Posted by
+			<span class="byline"> Автор
 				<span class="author vcard">
-					<a class="url fn n" href="https://wpstash.com/fashify/author/wpstash/">wpstash
-					</a>
+					<span class="decor url fn n">
+					<?= $arResult["CREATED_USER_NAME"], $arParams["CREATED_USER_LAST_NAME"]?>
+					</span>
 				</span>
 			</span>
 			<?if($arParams["DISPLAY_DATE"]!="N" && $arResult["DISPLAY_ACTIVE_FROM"]):?>
-				<span class="posted-on"> on 
-					<a href="" rel="bookmark">
+				<span class="posted-on"> размещено 
+					<span class="decor" rel="bookmark">
 						<time class="entry-date published" datetime="<?=$arResult["DISPLAY_ACTIVE_FROM"]?>"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></time>
-						<time class="updated" datetime="<?=$arResult["DISPLAY_ACTIVE_FROM"]?>"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></time>
-					</a>
+					</span>
 				</span>
 			<?endif;?>
+			<div id="social-share-buttons" class="social-likes" data-counters="no">
+				<div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
+				<div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
+				<div class="mailru" title="Поделиться ссылкой в Моём мире">Мой мир</div>
+				<div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
+				<div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках">Одноклассники</div>
+				<div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
+			</div>
+			<div class="clear-both"></div>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -71,9 +79,45 @@ $this->setFrameMode(true);
 <!-- 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">Continue Reading</h2>
 		<div class="nav-links"><div class="nav-previous"><a href="https://wpstash.com/fashify/2016/07/06/theyre-observant-incredibly-intuitive-and-can-sometimes-figure-out/" rel="prev"><span>Previous article</span> They’re observant, incredibly intuitive and can sometimes figure out</a></div><div class="nav-next"><a href="https://wpstash.com/fashify/2016/07/06/samsung-vs-apple-samsung-is-winning-every-way-but-one/" rel="next"><span>Next article</span> Samsung vs. Apple: Samsung Is Winning Every Way But One</a></div></div>
-	</nav>
+	</nav>-->
 	<footer class="entry-footer">
-		<div class="entry-taxonomies"><div class="entry-categories"><span>Posted in</span> <a href="https://wpstash.com/fashify/category/design/" rel="category tag">Design</a>, <a href="https://wpstash.com/fashify/category/muisic/" rel="category tag">Muisic</a>, <a href="https://wpstash.com/fashify/category/video/" rel="category tag">Videos</a></div><div class="entry-tags"><span>Tagged in</span> <a href="https://wpstash.com/fashify/tag/design/" rel="tag">design</a></div></div>	
+		<div class="entry-taxonomies">
+			<?if(count($arResult["CATEGORIES"])):?>
+            <div class="entry-categories posted-in-detail">
+				<span>В категориях</span>
+            	<?php foreach ($arResult["CATEGORIES"] as $category): ?>
+            		<a href="<?=$category["SECTION_PAGE_URL"]?>/" class="category tag" rel="category tag"><?=$category["NAME"]?></a> 
+            	<?php endforeach ?>
+            </div>
+            <?endif;?>
+		</div>	
 	</footer><!-- .entry-footer --> 
+
+
+	<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+	var hostname  = window.location.hostname;
+	var pathname  = window.location.pathname;
+	var url = hostname + pathname;
+	console.log(url);
+
+//this.page.url = url  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = url; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://intspirit.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 </article>
